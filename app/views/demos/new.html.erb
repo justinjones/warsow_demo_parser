@@ -1,0 +1,17 @@
+<% body_id('upload') %>
+
+<h1>Upload Demo</h1>
+
+<p>Upload a Warsow demo file.</p>
+
+<%= error_messages_for :demo %>
+
+<% form_for :demo, :action => url(:demos), :multipart => true do %>
+  <p><%= file_control :uploaded_data %></p>
+  
+  <p>Description</p>
+  
+  <p><%= text_area_control :description %></p>
+  
+  <p><%= submit_field :value => 'Upload Demo', :class => 'submit' %></p>
+<% end %>

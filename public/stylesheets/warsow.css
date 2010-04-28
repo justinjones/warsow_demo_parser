@@ -1,0 +1,99 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #CCC;
+	font: 1em Tahoma, Helvetica, Arial, sans-serif;
+}
+
+#header {
+	margin: 0;
+	padding: 10px 0;
+	background: #333;
+	color: #FFF;
+	text-align: center;
+}
+
+#header h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#content {
+	margin: 0 70px;
+	background: #CCC;
+}
+
+.demo-container {
+	clear: left;
+}
+
+.demo-container img {
+	float: left;
+	margin: 0 40px 40px 0;
+}
+
+.demo-container h3 {
+	color: #FF7815;
+}
+
+.demo-container ul li {
+	margin-left: 1.7em;
+	list-style: circle;
+}
+
+/* Warsow playername colors */
+
+.c0, .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9
+{
+	font-weight: bold;
+}
+
+.c0
+{
+	color: black;
+}
+
+.c1
+{
+	color: red;
+}
+
+.c2
+{
+	color: #0F0; /* green */
+}
+
+.c3
+{
+	color: yellow;
+}
+
+.c4
+{
+	color: #00F; /* blue */
+}
+
+.c5
+{
+	color: cyan;
+}
+
+.c6
+{
+	color: magenta;
+}
+
+.c7
+{
+	color: white;
+}
+
+.c8
+{
+	color: orange;
+}
+
+.c9
+{
+	color: gray;
+}

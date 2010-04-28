@@ -1,0 +1,62 @@
+<% body_id('demos') %>
+
+<h1>Recent Demos</h1>
+
+<table cellspacing="0" id="demos">
+  <tr>
+    <th>Uploaded</th>
+    <th>Players</th>
+    <th>Type</th>
+    <th>Map</th>
+    <th>DLs</th>
+    <th>Rating</th>
+  </tr>
+  
+  <%= partial 'demo', :with => @demos %>
+</table>
+
+<% throw_content :sidebar do %>
+  <div class="box corner">
+    <h3>Popular Players</h3>
+    <ul>
+    <% @popular_players.each do |player| %>
+      <li><%= link_to render_nickname(h(player.colored_name)), url(:player, player) %></li>
+    <% end %>
+    </ul>
+  </div>
+
+  <div class="box corner">
+    <h3>Popular Demos</h3>
+    <ul>
+    <% @popular_demos.each do |demo| %>
+      <li><%= link_to render_players(demo), url(:demo, demo) %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+    
+<!-->    
+<% @demos.each do |demo| %>
+<div class="demo-container">
+  <%= map_image(demo.map.name) %>
+  <h3><%= link_to render_nickname(h(demo.teams)), url(:demo, demo) %></h3>
+  <ul>
+    <li>Played <%= time_ago_in_words(demo.created_at) %> ago.</li>
+    
+    <li>Map: <%= h(demo.map.name) %></li>
+    
+    <li>Gametype: <%= h(demo.gametype) %></li>
+    
+    <% demo.player_stats.each do |player| %>
+    <li>Player: <%= render_nickname(h(player.colored_name)) %></li>
+    <li>Score: <%= h(player.score) %></li>
+    <li>Kills: <%= h(player.kills) %></li>
+    <li>Deaths: <%= h(player.deaths) %></li>
+    <li>Suicides: <%= h(player.suicides) %></li>
+    <% end %>
+    
+    <li>Spectators: <%= demo.spectator_stats.map { |s| render_nickname(h(s.colored_name)) }.join(', ') %></li>
+  </ul>
+</div>
+<% end %>
+<-->

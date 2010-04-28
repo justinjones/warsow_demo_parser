@@ -1,0 +1,66 @@
+<% body_id('demos') %>
+
+<h1><%= render_players(@demo) %></h1>
+
+<% @demo.player_stats.each do |pstat| %>
+    
+<h2>Stats for <%= render_nickname(pstat.colored_name) %></h2>
+
+<ul>
+  <li>Score: <%= pstat.score %></li>
+  <li>Kills: <%= pstat.kills %></li>
+  <li>Deaths: <%= pstat.deaths %></li>
+  <li>Suicides: <%= pstat.suicides %></li>
+  <li>Ping: <%= pstat.ping %></li>
+</ul>
+
+<table cellspacing="0" id="weapon_stats">
+    <% pstat.weapon_stats.sort_by { |s| s.weapon_id }.each do |ws| %>
+      <tr class="weap_<%= WeaponStat::WEAP_ACRONYMS[ws.weapon_id].downcase %>">
+        <th><%= image_tag('weap_' + WeaponStat::WEAP_ACRONYMS[ws.weapon_id].downcase + '.jpg', :width => 40, :height => 40) %></th>
+        <td class="stat_bar"><div class="stat_bar_active" style="width: <%= ws.total_percentage || 0 %>%"><%= "#{ws.total_hit}/#{ws.total_shot}" %></div> <span style="float: right;"><%= ws.total_percentage || 0 %>%</span></td>
+      </tr>
+      
+      <% if ws.weapon_id == WeaponStat::WEAP_LASERGUN || ws.weapon_id == WeaponStat::WEAP_ELECTROBOLT %>
+         <tr class="weap_<%= WeaponStat::WEAP_ACRONYMS[ws.weapon_id].downcase %>">
+          <th><%= image_tag('weap_' + WeaponStat::WEAP_ACRONYMS[ws.weapon_id].downcase + '_weak.jpg', :width => 40, :height => 40) %></th>
+          <td class="stat_bar"><div class="stat_bar_active" style="width: <%= ws.weak_percentage || 0 %>%"><%= "#{ws.weak_hit}/#{ws.weak_shot}" %></div> <span style="float: right;"><%= ws.weak_percentage || 0 %>%</span></td>
+        </tr>
+        
+        <tr class="weap_<%= WeaponStat::WEAP_ACRONYMS[ws.weapon_id].downcase %>">
+          <th><%= image_tag('weap_' + WeaponStat::WEAP_ACRONYMS[ws.weapon_id].downcase + '_strong.jpg', :width => 40, :height => 40) %></th>
+          <td class="stat_bar"><div class="stat_bar_active" style="width: <%= ws.strong_percentage || 0 %>%"><%= "#{ws.strong_hit}/#{ws.strong_shot}" %></div> <span style="float: right;"><%= ws.strong_percentage || 0 %>%</span></td>
+        </tr>
+      <% end %>
+    <% end %>
+
+</table>
+<% end %>  
+
+<div style="clear: both;"></div>
+
+<% throw_content :sidebar do %>
+  <div class="box corner">
+    <h3><%= render_players(@demo) %></h3>
+    <ul>
+    <% @other_demos.each do |demo| %>
+      <li><%= link_to "#{demo.map.name}, #{time_ago_in_words(demo.created_at)}", url(:demo, demo) %></li>
+    <% end %>
+    <% if @other_demos.empty? %>
+      <li>No other demos found.</li>
+    <% end %>
+    </ul>
+  </div>
+  
+  <% @demo.players.each do |player| %>
+  <div class="box corner">
+    <h3><%= render_nickname(player.colored_name) %>'s Demos</h3>
+    <ul>
+    <% player.demos.each do |demo| %>
+      <li><%= time_ago_in_words(demo.created_at) %><br /><%= link_to("vs #{render_nickname(demo.player_stats.reject { |ps| ps.player_id == player.id }.first.colored_name)} @ #{demo.map.name}", url(:demo, demo)) %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+      
+<% end %>

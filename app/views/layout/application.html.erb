@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Demo Spider</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta name="generator" content="HAPedit 3.1">
+    <%= css_include_tag :main %>
+    <%= include_required_css %>
+    
+    <%= js_include_tag 'jquery', 'jquery.curvycorners', 'application' %>
+  
+  </head>
+  <body <%= body_id %>>
+    <div id="container">
+      
+      <div id="header">
+        <%= image_tag 'logo-horiz.jpg', :width => 776, :height => 150 %>
+        
+        <ul id="navigation">
+          <li id="nav-demos"><a href="/demos">Demos</a></li>
+          <li id="nav-players"><a href="/players">Players</a></li>
+          <li id="nav-maps"><a href="/maps">Maps</a></li>
+          <li id="nav-upload"><a href="/demos/new">Upload</a></li>
+        </ul>
+        
+        <div style="clear: both;"></div>
+      </div>
+      
+
+      
+      <div id="wrapper">
+        <div id="content" class="corner">
+          <div id="content-inner">
+            <%= catch_content :for_layout %>
+          </div>
+        </div>
+      </div>
+      
+      <div id="right">
+        <%= catch_content :sidebar %>
+        
+        <div class="box corner">
+          <h3>Links</h3>
+          <ul>
+            <li><%= link_to 'Challenge TV', 'http://www.challenge-tv.com' %></li>
+            <li><%= link_to 'Warsow', 'http://www.warsow.net' %></li>
+            <li><%= link_to '1337 Demos', 'http://www.1337demos.com' %></li>
+          </ul>
+        </div>
+        
+      </div>
+
+      
+      <div id="footer"><p>Here it goes the footer</p></div>
+      
+    </div>
+  </body>
+  </html>

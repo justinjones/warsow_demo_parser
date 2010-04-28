@@ -1,0 +1,30 @@
+<demo>
+  <id type="integer">1</id>
+  <gametype>duel</gametype>
+  <local_id type="integer">1021</local_id>
+  <protocol type="integer">10</protocol>
+  <downloads type="integer">931</downloads>
+  
+  <file uri="http://domain.com/demos/person_vs_person.zip">
+
+  <winner>
+    <id type="integer">1</id>
+    <name>nagash</name>
+    <score type="integer">10</score>
+    <colored_name>^3nagash</colored_name>
+  </winner>
+  
+  <loser>
+    <id type="integer">2</id>
+    <name>beastrn</name>
+    <score type="integer">8</score>
+    <colored_name>^1beastrn</colored_name>
+  </loser>
+  
+  <map>
+    <id type="integer">1</id>
+    <name>wdm3</name>
+  </map>
+</demo>
+  
+  

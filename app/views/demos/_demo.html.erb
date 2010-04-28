@@ -1,0 +1,18 @@
+<tr>
+  <td><%= time_ago_in_words(demo.created_at) %> ago</td> 
+  <td><%= link_to render_players(demo), url(:demo, demo) %></td>
+  <td class="<%= demo.gametype %>"><span class="<%= demo.gametype %>"><%= demo.gametype %></span></td>
+  <td><%= link_to demo.map.name, url(:map, demo.map) %></td>
+  <td><%= demo.downloads %></td>
+  <td>
+    <ul class="star-rating">
+    <li class="current-rating" style="width: 120px;">Currently 3.5/5 Stars.</li>
+    <li><a href="#" title="1 star out of 5" class="one-star">1</a></li>
+    <li><a href="#" title="2 stars out of 5" class="two-stars">2</a></li>
+    <li><a href="#" title="3 stars out of 5" class="three-stars">3</a></li>
+    <li><a href="#" title="4 stars out of 5" class="four-stars">4</a></li>
+    <li><a href="#" title="5 stars out of 5" class="five-stars">5</a></li>
+    </ul>
+  </td>
+    
+</tr>

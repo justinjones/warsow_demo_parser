@@ -1,0 +1,12 @@
+<% body_id('players') %>
+
+<h1>Players</h1>
+
+<div id="players">
+  <% @players.each do |player| %>
+    <span class="player"><%= link_to(player.colored_name, url(:player, player)) %> <sup><%= player.demos.size %> demos</sup></span>
+  <% end %>
+</div>
+
+<div style="clear: both;"></div>
+  

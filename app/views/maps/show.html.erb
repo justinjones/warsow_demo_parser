@@ -1,0 +1,16 @@
+<% body_id('maps') %>
+
+<h1>Map - <%= @map.name %></h1>
+
+<table cellspacing="0" id="demos">
+  <tr>
+    <th>Uploaded</th>
+    <th>Players</th>
+    <th>Type</th>
+    <th>Map</th>
+    <th>DLs</th>
+    <th>Rating</th>
+  </tr>
+  
+  <%= partial 'demos/demo', :with => @demos %>
+</table>

@@ -1,0 +1,12 @@
+<% body_id('maps') %>
+
+<h1>Maps</h1>
+
+<% @maps.each do |map| %>
+<div class="map-container">
+  <%= link_to map_image(map.name), url(:map, map) %>
+  <%= link_to "#{map.name} (#{map.demos.size} demos)", url(:map, map) %>
+</div>
+<% end %>
+
+<div style="clear: both;"></div>

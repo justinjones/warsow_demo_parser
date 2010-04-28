@@ -1,0 +1,478 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 76% verdana,arial,sans-serif;
+	background: #634664 url(/images/body-bg.jpg) repeat-x;
+	color: #333;
+}
+
+p {
+	margin: 0 10px 10px;
+}
+
+
+
+div#header {
+	padding: 0;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+div#header img {
+	margin-left: 15px;
+	
+}
+
+div#content p {
+	line-height: 1.4;
+}
+
+div#navigation { 
+	background: #FFF;
+}
+
+div#extra {
+	background: #FFF;
+}
+
+div#footer {
+	color: #FFF;
+}
+
+div#footer p {
+	margin: 0;
+	padding: 5px 10px;
+}
+
+div#wrapper {
+	float: left;
+	width: 100%;
+	background: #634564 url(/images/wrapper-bg.jpg) repeat-x;
+}
+
+div#content {
+	margin-right: 240px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	background: #EEE;
+	color: #222;
+	border: 1px solid #000;
+}
+
+div#content-inner {
+	padding: 0 20px 20px 20px;
+}
+
+div#right {
+	float: left;
+	width: 200px;
+	margin-left: -220px;
+	margin-top: 20px;
+}
+
+div#extra {
+	clear: left;
+	width: 100%;
+}
+
+ul#navigation {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #222;
+	width: 100%;
+	height: 32px;
+	display: block;
+	padding-left: 20px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	margin-top: 10px;
+}
+
+ul#navigation li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	height: 32px;
+	position: relative;
+    margin-right: 10px;
+}
+
+ul#navigation li a {
+	color: #AAA;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 32px;
+	padding-left: 33px;
+	height: 32px;
+	display: block;
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+	padding-right: 10px;
+	border: none;
+}
+
+li#nav-demos a {
+	background-image: url(/images/nav-demos-off.jpg);	
+}
+
+li#nav-demos a:hover, body#demos li#nav-demos a {
+	background-image: url(/images/nav-demos-on.jpg);
+	color: #FFF;
+	background-color: #444;	
+}
+
+li#nav-players a {
+	background-image: url(/images/nav-players-off.jpg);	
+}
+
+li#nav-players a:hover, body#players li#nav-players a {
+	background-image: url(/images/nav-players-on.jpg);
+	color: #FFF;
+	background-color: #444;
+}
+
+li#nav-maps a {
+	background-image: url(/images/nav-maps-off.jpg);
+}
+
+li#nav-maps a:hover, body#maps li#nav-maps a {
+	background-image: url(/images/nav-maps-on.jpg);
+	color: #FFF;
+	background-color: #444;
+}
+
+li#nav-upload a {
+	
+}
+
+li#nav-upload a:hover, body#upload li#nav-upload a {
+	color: #FFF;
+	background-color: #444;
+}
+
+div#right div.box {
+	background: #EEE;
+	padding: 1px 10px;
+	margin-bottom: 40px;
+	border: 1px solid #000;
+}
+
+div#right h3 {
+ 	margin: 0 0 10px 0;
+	padding: 0;
+	padding: 5px 5px;
+	color: #90312B;
+	border-bottom: 2px solid #90312B;
+}
+
+div#right ul {
+	margin: 0;
+	padding: 0;
+   	list-style: none;
+}
+
+div#right ul li {
+	margin: 0;
+	padding: 0;
+	padding: 3px 5px;
+}
+
+td.duel, td.da {
+}
+
+span.duel {
+	background: #131399;
+	color: #FFF;
+	padding: 3px 5px;
+}
+
+span.da {
+	background: red;
+	color: #FFF;
+	padding: 3px 5px;
+}
+
+table {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+table#demos {
+	width: 100%;
+	
+}
+
+table th, table td {
+	text-align: left;
+	padding: 10px;
+	margin: 0;
+	border: 0;
+}
+
+h1 {
+	margin: 0 0 20px 0;
+	padding: 7px 10px;
+	color: #121097;
+	display: block;
+	border-bottom: 3px solid #121097;
+	
+}
+
+input {
+	font-family: verdana, arial, helvetica, sans-serif1;
+	font-size: 1.5em;
+	width: 25em;
+	padding: 3px;
+}
+
+input.submit {
+	width: auto;
+}
+
+textarea {
+	font-family: verdana, arial, helvetica, sans-serif;
+	padding: 3px;
+	font-size: 1.5em;
+	width: 25em;
+	height: 8em;
+}
+
+table#weapon_stats {
+	border-collapse: separate;
+	border-spacing: 0 1em;
+}
+
+table#weapon_stats th {
+	padding: 3px 10px;
+}
+
+table#weapon_stats tr {
+}
+
+table#weapon_stats td.stat_bar {
+	width: 200px;
+	background: #CCC;
+	padding: 0;
+	text-align: left;
+	border: 1px solid #333;
+	padding: 3px;
+	font-weight: bold;
+}
+
+div.stat_bar_active {
+	height: 100%;
+	text-align: left;
+	float: left;
+	margin: 0;
+	padding: 0;
+	
+}
+
+tr.weap_gb div.stat_bar_active {
+	background: grey;
+}
+
+tr.weap_rg div.stat_bar_active {
+	background: orange;
+}
+
+tr.weap_gl div.stat_bar_active {
+	background: #00F;
+}
+
+tr.weap_rl div.stat_bar_active {
+	background: red;
+}
+
+tr.weap_pg div.stat_bar_active {
+	background: #0F0;
+}
+
+tr.weap_lg div.stat_bar_active {
+	background: yellow;
+}
+
+tr.weap_eb div.stat_bar_active {
+	background: cyan;
+}
+
+tr.weap_ig div.stat_bar_active {
+	background: magenta;
+}
+
+div.map-container {
+	width: auto;
+	text-align: center;
+	padding: 3px;
+	margin-right: 30px;
+	margin-bottom: 20px;
+	background: #CCC;
+	float: left;
+}
+
+div.map-container img {
+	display: block;
+	border: 0;
+}
+
+div#players span.player {
+	float: left;
+	font-size: 1.5em;
+	margin-right: 30px;
+	line-height: 2.5em;
+}
+
+/* Warsow playername colors */
+
+.c0, .c1, .c2, .c3, .c4, .c5, .c6, .c7, .c8, .c9
+{
+	font-weight: bold;
+}
+
+.c0
+{
+	color: #000; /* black */
+}
+
+.c1
+{
+	color: red;
+}
+
+.c2
+{
+	color: #0F0; /* green */
+}
+
+.c3
+{
+	color: yellow;
+}
+
+.c4
+{
+	color: #00F; /* blue */
+}
+
+.c5
+{
+	color: cyan;
+}
+
+.c6
+{
+	color: magenta;
+}
+
+.c7
+{
+	color: #888;
+}
+
+.c8
+{
+	color: orange;
+}
+
+.c9
+{
+	color: gray;
+}
+
+
+a {
+	border-bottom: 1px solid red;
+	
+}
+
+a:hover {
+	border-bottom: 1px solid red;
+}
+
+/*             styles for the star rater                */	
+.star-rating{
+	list-style:none;
+	margin: 0px;
+	padding:0px;
+	width: 150px;
+	height: 30px;
+	position: relative;
+	background: transparent url(/images/star_rating.gif) top left repeat-x;		
+}
+.star-rating li{
+	padding:0px;
+	margin:0px;
+	height:30px;
+	width: 30px;		
+	/*\*/
+	float: left;
+	/* */
+}
+.star-rating li a{
+	display:block;
+	width:30px;
+	height: 30px;
+	line-height:30px;
+	text-decoration: none;
+	text-indent: -9000px;
+	z-index: 20;
+	position: absolute;
+	padding: 0px;
+	overflow:hidden;
+	border: none;
+}
+.star-rating li a:hover {
+	background: transparent url(/images/star_rating.gif) left 30px;
+	z-index: 2;
+	left: 0px;
+	border:none;
+}
+.star-rating a.one-star{
+	left: 0px;
+}
+.star-rating a.one-star:hover{
+	width:30px;
+}
+.star-rating a.two-stars{
+	left:30px;
+}
+.star-rating a.two-stars:hover{
+	width: 60px;
+}
+.star-rating a.three-stars{
+	left: 60px;
+}
+.star-rating a.three-stars:hover{
+	width: 90px;
+}
+.star-rating a.four-stars{
+	left: 90px;
+}	
+.star-rating a.four-stars:hover{
+	width: 120px;
+}
+.star-rating a.five-stars{
+	left: 120px;
+}
+.star-rating a.five-stars:hover{
+	width: 150px;
+}
+.star-rating li.current-rating{
+	background: url(/images/star_rating.gif) left 91px;
+	position: absolute;
+	height: 30px;
+	display: block;
+	text-indent: -9000px;
+	z-index: 1;
+}
+/* remove halo effect in firefox   */
+a:active{
+	outline: none;
+}		
+
